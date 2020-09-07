@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)https://www.duhs.edu.pk/jobsduhs/ad-hr/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title> JOB APPLICATION FORM. </title>
+  
+<link href="./JOB APPLICATION FORM._files/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="./JOB APPLICATION FORM._files/bootstrap.min.js.download"></script>
+<script src="./JOB APPLICATION FORM._files/jquery-3.2.1.min.js.download"></script>
+
+
+<script type="text/javascript">
+/*
+$('#myform').submit(function(){
+ return false;
+});
+ 
+$('#insert').click(function(){
+ $.post( 
+ $('#myform').attr('action'),
+ $('#myform').serializeArray(),
+ function(result){
+ 	//alert(result);
+ //$('#result').html(result);
+ if(result=="success") {
+ 	$('#result').val("Data Updated");
+ }
+
+
+
+ }
+ );
+});
+*/
+
+
+
+$(document).ready(function(){
+    var counter = 2;
+    $("#addButton").click(function () {
+	if(counter>50){
+            alert("Only 50 Educational Textboxes allow");
+            return false;
+	}
+
+	var newTextBoxDiv = $(document.createElement('div'))
+
+	     .attr("id", 'TextBoxDiv' + counter);
+
+	newTextBoxDiv.after().html('<label  class="text-success"> '+ counter + ' </label>' + '<div class="form-row"><div class="col form-group"><label  class="text-success"> DEGREE/DIPLOMA/CERTIFICTE </label>' +    
+ '<input type="text" class="form-control" placeholder="DEGREE/DIPLOMA/CERTIFICTE" name="pdegree[]' + '" id="textbox' + counter + '" value="" maxlength="150" required="required" >' + ' </div> <div class="col form-group"><label  class="text-success">  YEAR </label> <input type="text" class="form-control" placeholder="YEAR" name="pyear[]'  +   '" id="textbox2' + counter + '" value="" size="3" maxlength="14" required="required" > </div> <div class="col form-group"> 			<label  class="text-success">  INSTITUTION  </label><input type="text" class="form-control" placeholder="INSTITUTION"  name="pinst[]'   +    '" id="textbox3' + counter + '" value=""   maxlength="150" required="required"></div></div>');
+
+	newTextBoxDiv.appendTo("#TextBoxesGroup");
+	counter++;
+     });
+
+
+     $("#removeButton").click(function () {
+	if(counter==2){
+          alert("No more textbox to remove");
+          return false;
+       }
+	counter--;
+
+        $("#TextBoxDiv" + counter).remove();
+     });
+
+
+
+var counterExp = 2;
+
+ $("#addButtonExp").click(function () {
+	if(counterExp>50){
+            alert("Only 50 Experience textboxes allow");
+            return false;
+	}
+
+	var newTextBoxDiv = $(document.createElement('div'))
+	     .attr("id", 'TextBoxDivExp' + counterExp);
+
+newTextBoxDiv.after().html('<label  class="text-success"> '+ counterExp + ' </label><div class="form-row"><div class="col form-group">' + '<input type="text" class="form-control" placeholder="POST" name="post[]'  +  '" id="etextbox' + counterExp + '" value=""   maxlength="150" required="required"></div>' + '<div class="col form-group"> <input type="text" class="form-control" placeholder="INSTITUTION" name="einst[]' +  +   '" id="etextbox2' + counterExp + '" value=""   maxlength="150" required="required"></div> ' + '<div class="col form-group"> <input type="text" class="form-control" placeholder="FROM" name="from[]'  +    '" id="etextbox3' + counterExp + '" value=""   maxlength="10" required="required"></div> ' + '<div class="col form-group"> <input type="text" class="form-control" placeholder="TO" name="to[]'  +    '" id="etextbox3' + counterExp + '" value=""   maxlength="10" required="required" ></div></div> ');
+
+	newTextBoxDiv.appendTo("#TextBoxesGroupExp");
+	counterExp++;
+
+     });
+
+     $("#removeButtonExp").click(function () {
+	if(counterExp==2){
+          alert("No more textbox to remove");
+          return false;
+       }
+	counterExp--;
+        $("#TextBoxDivExp" + counterExp).remove();
+     });
+
+
+
+var counterahn = 2;
+
+ $("#addButtonahn").click(function () {
+	if(counterahn>30){
+            alert("Only 30 Honours & Awards Textboxes allow");
+            return false;
+	}
+
+	var newTextBoxDiv = $(document.createElement('div'))
+	     .attr("id", 'TextBoxDivahn' + counterahn);
+
+	newTextBoxDiv.after().html('<label  class="text-success"> '+ counterahn + ' </label>' + '<input type="text" class="form-control" placeholder="ACADEMIC HONOURS AND AWARDS" name="ahonour[]'  +  '" id="textbox' + counterExp + '" value="" maxlength="100" >');
+	newTextBoxDiv.appendTo("#TextBoxesGroupahn");
+	counterahn++;
+     });
+
+
+    $("#removeButtonahn").click(function () {
+	if(counterahn==2){
+          alert("No more textbox to remove");
+          return false;
+       }
+
+	counterahn--;
+        $("#TextBoxDivahn" + counterahn).remove();
+
+     });
+
+var counterRes = 2;
+
+ $("#addButtonRes").click(function () {
+	if(counterRes>60){
+            alert("Only 60 textboxes allow");
+            return false;
+	}
+
+	var newTextBoxDiv = $(document.createElement('div'))
+	     .attr("id", 'TextBoxDivRes' + counterRes);
+	newTextBoxDiv.after().html('<label  class="text-success"> '+ counterRes + ' </label><div class="form-row"><div class="col form-group">' + '<input type="text" class="form-control" placeholder="TITLE OF PAPER" name="research[]'  +  '" id="textbox' + counterRes + '" value="" maxlength="150"  ></div>' + '<div class="col form-group"> <input type="text" class="form-control" placeholder="JOURNAL NAME" name="jname[]'  + counterRes + ' value="" maxlength="150" ></div> <div class="col form-group"><input type="text" class="form-control" placeholder="YEAR" name="ryear[]'  +  counterRes + '  value=""   maxlength="15"></div>' + '<div class="col form-group"><input type="text" class="form-control" placeholder="NAME AS AUTHOR IN JOURNAL" name="rname[]'  +    '" id="textbox3' + counterRes + '" value="" maxlength="10" ></div></div>');
+
+	newTextBoxDiv.appendTo("#TextBoxesGroupRes");
+	counterRes++;
+
+     });
+
+
+     $("#removeButtonRes").click(function () {
+	if(counterRes==1){
+          alert("No more textbox to remove");
+          return false;
+       }
+
+	counterRes--;
+        $("#TextBoxDivRes" + counterRes).remove();
+
+     });
+
+	 
+var counterwkt = 2;
+
+ $("#addButtonwkt").click(function () {
+	if(counterwkt>30){
+            alert("Only 30 textboxes allow");
+            return false;
+	}
+
+	var newTextBoxDiv = $(document.createElement('div'))
+	     .attr("id", 'TextBoxDivwkt' + counterwkt);
+
+	newTextBoxDiv.after().html('<label  class="text-success"> '+ counterwkt + ' </label>' +
+	      '<div class="form-row"><div class="col form-group"><input type="text" class="form-control" placeholder="WORKSHOP NAME" name="wname[]'  +  '" id="wtextbox' + counterwkt + '" value="" maxlength="150" ></div>' + '<div class="col form-group"> <input type="text" class="form-control" placeholder="VENUE" name="wvenue[]' +  +   '" id="wtextbox2' + counterwkt + '" value="" maxlength="50"  ></div>' + '<div class="col form-group"><input type="text" name="wyear[]'  +    '" class="form-control" placeholder="YEAR" id="wtextbox3' + counterwkt + '"     maxlength="15" ></div></div>');
+
+	newTextBoxDiv.appendTo("#TextBoxesGroupwkt");
+	counterwkt++;
+
+     });
+
+     $("#removeButtonwkt").click(function () {
+	if(counterwkt==2){
+          alert("No more Workshops to remove");
+          return false;
+       }
+
+	counterwkt--;
+        $("#TextBoxDivwkt" + counterwkt).remove();
+     });
+
+
+     $("#getButtonValue").click(function () {
+	var msg = '';
+	for(i=1; i<counter; i++){
+   	  msg += "\n Textbox #" + i + " : " + $('#textbox' + i).val();
+	}
+
+    	  alert(msg);
+
+     });
+
+  });
+
+</script>
+
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="./JOB APPLICATION FORM._files/all.css">
+
+
+
+<script type="text/javascript">
+
+
+function stopPrntScr() {
+
+            var inpFld = document.createElement("input");
+            inpFld.setAttribute("value", ".");
+            inpFld.setAttribute("width", "0");
+            inpFld.style.height = "0px";
+            inpFld.style.width = "0px";
+            inpFld.style.border = "0px";
+            document.body.appendChild(inpFld);
+            inpFld.select();
+            document.execCommand("copy");
+            inpFld.remove(inpFld);
+        }
+       function AccessClipboardData() {
+            try {
+                window.clipboardData.setData('text', "Access   Restricted");
+            } catch (err) {
+            }
+        }
+        setInterval("AccessClipboardData()", 300);
+
+
+function checkKeyPressed(e) {
+    if (e.keyCode == "44") {
+        //alert("Print Screen button was pressed.");
+        stopPrntScr();
+    }
+}
+window.addEventListener("keyup", checkKeyPressed, false);
+
+
+
+    $(function () {
+      $(document).bind("contextmenu",function(e){
+        e.preventDefault();
+        //alert("Right Click is not allowed");
+      }
+    );
+		 
+    }
+     );
+  </script>
+
+<style media="print">
+body {
+display : none;
+}
+</style>
+
+</head>
+
+<body id="jobpreview" style="background-color: #BBE4FB;">  
+
+<div class="form-row">  &nbsp;   </div>
+
+<div class="container col-md-10">
+    <p class="text-center"> 
+  <img src="./JOB APPLICATION FORM._files/dowlogo.png">  </p>
+<hr style="border-top: 1px solid #002244;">
+
+
+<div class="row justify-content-center">
+<div class="col-md-10">
+<div class="card text-white border-success">
+<header class="card-header">
+	 
+	 
+	<div class="card-header bg-success "> 
+   <h4 class="card-title"> JOB APPLICATION FORM <br> (Human Resources) </h4>     
+  </div>
+</header>
+<article class="card-body">
+<form class="needs-validation" method="post" id="myform" action="https://www.duhs.edu.pk/jobsduhs/ad-hr/registration1.php">
+
+	<div class="form-row">
+		<div class="col form-group">
+			<label class="text-success"> POST APPLIED FOR * </label>   
+
+<select name="ptitle" class="form-control" required="required">
+		    <option value=""> SELECT POST APPLIED </option>		
+		    
+
+
+
+<option value="Professor"> Professor  </option>
+<option value="Associate Professor"> Associate Professor  </option>
+<option value="Assistant Professor"> Assistant Professor   </option>
+<option value="Lecturer"> Lecturer </option>
+<option value="Demonstrator">  Demonstrator </option>
+<option value="Senior Registrar">  Senior Registrar    </option>
+
+<option value="Other"> Other      </option>
+
+<!--
+
+
+<option value="Critical Care Technologist" > Critical Care Technologist / Respiratory Technologist </option>
+<option value="Director Nursing" > Director Nursing </option>
+
+<option value="ICU Technician" > ICU Technician </option>
+<option value="Manager Nursing" > Manager Nursing – Training & Development </option>
+<option value="Senior Manager–Networks" > Senior Manager – Networks & Infrastructure </option>
+<option value="Software Architect" > Software Architect </option>
+<option value="Consultant" >Consultant</option>
+
+<option value="Senior Medical Officer" >Senior Medical Officer</option>
+<option value="Medical Officer" >Medical Officer</option>
+
+<option value="Registered Nurse" >Registered Nurse</option>
+
+<option value="Pharmacist" > Pharmacist  </option>
+
+<option value="Pharmacy Technician" > Pharmacy Technician </option>
+
+<option value="Business Unit Manager - DDRRL" > Business Unit Manager - DDRRL  </option>
+
+<option value="Business Unit Manager - DOWRAD" > Business Unit Manager - DOWRAD  </option>
+
+
+<option value="Instructor" > Instructor </option>
+
+<option value="Registrar" > Registrar      </option>
+<option value="Alumni and Placement Manager" > Alumni and Placement Manager </option>
+
+<option value="Business Manager-Executive Education" > Business Manager - Executive Education    </option>
+
+
+<option value="Lab Analyst"> Lab Analyst </option>
+
+
+
+
+<option value="Manager Quality Assurance" >  Manager Quality Assurance </option>
+<option value="Manager Regulatory Affairs" > Manager Regulatory Affairs </option>
+
+
+<option value="Medical Technologist" > Medical Technologist  </option>
+
+<option value="Medical Transcriber" > Medical Transcriber </option>
+
+<option value="Occupational Therapist" >  Occupational Therapist    </option>
+
+<option value="Phlebotomist" > Phlebotomist  </option>
+
+<option value="Quality Assurance Officer" > Quality Assurance Officer </option>
+<option value="Quality Control Officer" > Quality Control Officer </option>
+
+<option value="Research Assistant" >  Research Assistant  </option>
+
+<option value="Scientific officer" >  Scientific officer    </option>
+
+
+
+<option value="Technicians" >Technician</option>
+
+<option value="Assistant Manager Supply Chain" > Assistant Manager Supply Chain </option>
+
+<option value="Lab Technician">Lab Technician </option>
+
+
+<option value="Lecturer " > Lecturer       </option>
+
+<option value="Medical Officer" >Medical Officer</option>
+<option value="Medical Technologist" > Medical Technologist  </option>
+
+
+
+
+
+
+
+<option value="Chief Operating Officer" > Chief Operating Officer     </option>
+<option value="Senior Medical Officer" > Senior Medical Officer </option>
+<option value="Medical Officer" > Medical Officer </option>
+
+<option value="Manager Operation Theatre" > Manager Operation Theatre  </option>
+
+
+
+
+
+<option value="Research Associate" > Research Associate   </option>
+
+
+<option value="Senior Pharmacy Technician"> Senior Pharmacy Technician </option>
+<option value="Senior Medical Officer" >Senior Medical Officer</option>
+
+
+<option value="Professor" > Professor  </option>
+<option value="Associate Professor" > Associate Professor  </option>
+<option value="Assistant Professor" > Assistant Professor   </option>
+
+<option value="Senior Lecturer Senior Registrar" > Senior Lecturer / Senior Registrar    </option>
+<option value="Lecturer Demonstrator" > Lecturer / Demonstrator </option>
+
+
+
+
+
+<option value="Director Planning & Development" > Director Planning & Development  </option>
+<option value="Plant Manager" > Plant Manager </option>
+<option value="Production Supervisor" > Production Supervisor </option>
+<option value="Plant Technician" > Plant Technician       </option>
+<option value="Porter" > Porter       </option>
+<option value="Pharmacist" > Pharmacist       </option>
+<option value="Pharmacy Technician" > Pharmacy Technician       </option>
+
+
+<option value="Medical Officer" > Medical Officer </option>
+<option value="Director QEC" > Director Quality Enhancement Cell  </option>
+<option value="DeputyDirector QEC" > Deputy Director Quality Enhancement Cell  </option>
+
+<option value="HR Business Partner" > HR Business Partner </option>
+<option value="Talent Acquisition Specialist" > Talent Acquisition Specialist </option>
+
+
+
+<option value="Manager HR">Manager Human Resource Department</option>
+<option value="Asst Manager HR">Assistant Manager Human Resource Department</option>
+<option value="Nursing Supervisor Incharge">Nursing Supervisor/Incharge</option>
+
+<option value="Cardiac Perfusionist">Cardiac Perfusionist</option>-->
+
+</select>
+
+<!--
+<input type="text" class="form-control" placeholder="POST APPLIED FOR" name="ptitle" value=""   maxlength="120"  required="required">-->
+		</div>   
+		<div class="col form-group">
+			<label class="text-success">  SPECIALITY </label>
+
+
+<select name="pspeciality" class="form-control" required="">
+	<option value=""> SELECT SPECIALITY FOR </option>
+
+<option value="Anatomy"> Anatomy   </option>
+<option value="Biochemistry"> Biochemistry   </option>
+<option value="Dental Education Department"> Dental Education Department  </option>
+<option value="General Surgery">  General Surgery   </option>
+<option value="Nutritional Sciences"> Nutritional Sciences   </option>
+<option value="Oral Biology"> Oral Biology </option>
+<option value="Operative Dentistry"> Operative Dentistry  </option>
+<option value="Orthodontics"> Orthodontics  </option>
+<option value="Oral Medicine">  Oral Medicine </option>
+<option value="Pathology"> Pathology   </option>
+<option value="Periodontics"> Periodontics  </option>
+<option value="Prosthodontics"> Prosthodontics  </option>
+<option value="Public Health"> Public Health   </option>
+<option value="Pharmacology"> Pharmacology  </option>
+<option value="Physiology"> Physiology  </option>
+<option value="Dental Materials"> Science of Dental Materials    </option>
+
+
+
+
+<option value="IBHM"> Institute of Business &amp; Health Mangement 
+</option>
+
+
+
+
+<option value="Other"> Other   </option>
+
+
+
+</select>
+	<!--	
+
+<option value="Critical Care"  > Critical Care   </option>
+<option value="Nursing"  > Nursing   </option>
+
+
+
+<option value="Anesthesia"  > Anesthesia   </option>
+
+<option value="Infectious Diseases"  > Infectious Diseases   </option>
+<option value="Pulmonology"  > Pulmonology   </option>
+
+<option value='Anesthesiology' > Anesthesiology </option>
+
+<option value="Biotechnology"  > Biotechnology </option>
+<option value='Cardiology' > Cardiology </option>
+
+<option value="Endocrinology"  > Endocrinology </option>
+
+<option value='ENT' > ENT </option>
+
+<option value="Forensic Medicine"  > Forensic Medicine   </option>
+
+<option value='Genetics' > Genetics </option>
+
+<option value='Gynaecology(Urogynaecology)' > Gynaecology (Urogynaecology) </option>
+
+<option value='Gynaecology(Oncology)' > Gynaecology (Oncology) </option>
+
+<option value="Infectious Diseases" >   Infectious Diseases    </option>
+
+
+
+<option value="Radiology(VIR)"  > Radiology  (VIR)   </option>
+<option value="Rheumatology"  > Rheumatology </option>
+<option value="Midwifery"  > Midwifery   </option>
+<option value='Orthopedic and Trauma' > Orthopedic and Trauma </option>
+
+<option value="Faculty"  > Faculty   </option>
+
+<option value="Community Medicine"  > Community Medicine   </option>
+
+
+<option value='DDRRL' > Dow Diagnostic Research & Reference Lab </option>
+
+<option value="Epidemiology"  > Epidemiology   </option>
+
+<option value="Health Informatics"  > Health Informatics    </option>
+
+<option value="Health Promotion"  > Health Promotion    </option>
+<option value="IBBPS"  > Institute of Biological, Biochemical and Pharmaceutical Sciences    </option>
+
+
+<option value="Management"  > Management    </option>
+<option value="Marketing"  >   Marketing   </option>
+
+
+
+<option value="Neurology"  > Neurology    </option>
+
+
+
+<option value="Psychiatry"  > Psychiatry    </option>
+
+
+<option value="Supply Chain"  >  Supply Chain    </option>
+
+
+<option value='Cardiac Perfusion' > Cardiac Perfusion </option>
+
+<option value="Management"  > Management    </option>
+<option value="ManagementandMarketing"  > Management & Marketing   </option>
+<option value="ManagementandSupply Chain"  > Management & Supply Chain    </option>
+<option value="Hospital Management and Economics"  > Hospital Management & Economics    </option>
+
+
+<option value="Hospital Management and Economics"  > Hospital Management & Economics    </option>
+
+
+<option value="Medicine"  > Medicine    </option>
+
+<option value="Ophthalmology"  > Ophthalmology    </option>
+
+<option value="ENT"  > ENT    </option>
+
+<option value="Paediatrics"  > Paediatrics    </option>
+
+<option value="Dermatology"  > Dermatology    </option>
+
+
+
+
+
+<option value="Emergency Medicine"  >  Emergency Medicine     </option>
+
+<option value="Family Medicine"  > Family Medicine     </option>
+
+<option value="Paediatrics"  > Paediatrics    </option>
+
+<option value="Dermatology"  > Dermatology    </option>
+
+
+
+<option value='Anaesthesia' >Anaesthesia </option>
+
+
+
+
+<option value='Bone Marrow Transplantation' >Bone Marrow  Transplantation </option>
+<option value="Bioinformatics and Molecular Medicine Lab" > Bioinformatics and Molecular Medicine Lab  </option>
+<option value="Bioprocess Engineering Lab" > Bioprocess Engineering Lab  </option>
+
+<option value='Cardiac Perfusion' > Cardiac Perfusion </option>
+
+<option value='CCU' >CCU </option>
+<option value='CCU (Female)' >CCU (Female) </option>
+<option value='CCU Cardiology' >CCU Cardiology </option>
+
+<option value="Community Dentistry"  > Community Dentistry   </option>
+
+
+
+<option value="Protein Research Lab" > Downstream Processing and Protein Research Lab  </option>
+
+
+<option value='English' >English</option>
+
+<option value='Emergency' >Emergency </option>
+<option value='ER' >ER </option>
+
+
+<option value="General Medicine" > General Medicine  </option>
+
+<option value="Gene manipulation Lab" > Gene Manipulation Lab  </option>
+<option value='Gynae Ward' >Gynae Ward </option>
+
+
+<option value='Haematology Lab' >Haematology Lab </option>
+
+
+<option value='ICU' >ICU </option>
+
+
+
+<option value='Molecular Medicine' >Molecular Medicine </option>
+
+<option value='NILGID' > National Institute of Liver & Gastro Intestinal Diseases  </option>
+<option value='Nephrology' >Nephrology </option>
+<option value='NICU' >NICU </option>
+<option value='ObsGynae' >Obs/Gynae</option>
+
+
+<option value="Operative Dentistry"  > Operative Dentistry  </option>
+
+<option value="Oral Diagnosis Oral Medicine"  > Oral Diagnosis / Oral Medicine </option>
+<option value="Oral Pathology"  > Oral Pathology   </option>
+
+<option value="Oral Surgery Maxillofacial Surgery"  > Oral Surgery / Oral & Maxillofacial Surgery   </option>
+<option value="Orthodontics" > Orthodontics  </option>
+<option value='Orthopaedic' >Orthopaedic </option>
+<option value='Paeds' >Paeds </option>
+
+
+<option value="Periodontics" > Periodontics  </option>
+<option value="Periodontology" > Periodontology  </option>
+
+<option value="Prosthodontics" > Prosthodontics  </option>
+
+
+
+<option value='Renal Transplant Unit' >Renal Transplant Unit </option>
+<option value="Regenerative Medicine  Lab" > Stem Cells and Regenerative Medicine  Lab  </option>
+
+
+
+<option value='Urology' > Urology </option>
+
+
+<option value="RIVA WATER PROJECT (ORIC)"  > RIVA WATER PROJECT (ORIC)   </option>
+<option value="PHARMACY"  > PHARMACY    </option>
+<option value="OICD"  > OICD    </option>
+<option value="QEC"  > QEC    </option>
+<option value="HR"  > HR    </option>
+<option value="PD"  > P & D    </option>	
+<input type="text" class="form-control" placeholder="SPECIALITY" name="pspeciality"   value=""   maxlength="80">-->
+		</div> <!-- form-group end.// -->
+	</div> <!-- form-row end.// -->
+
+<div class="form-row">
+		<div class="col form-group">
+			<label class="text-success"> DATE OF ADVERTISEMENT </label>   
+<input class="form-control" placeholder="DATE OF ADVERTISEMENT" value="" type="date" name="padvdat" maxlength="15">
+		</div> <!-- form-group end.// -->
+		<div class="col form-group">
+			<label class="text-success">  DATE OF APPLICATION </label>
+<input type="date" name="pappdat" class="form-control" placeholder="DATE OF APPLICATION" value="" maxlength="15">
+		</div> <!-- form-group end.// -->
+	</div> <!-- form-row end.// -->
+<div class="form-row">  
+	<p>&nbsp; </p>   </div>
+
+<div class="card text-white border-success">
+  <div class="card-header bg-success "> 
+   <h4 class="card-title"> 1. PERSONAL DETAILS </h4>     
+  </div>
+<div class="card-body">    
+
+	<div class="form-row">
+		<div class="col form-group">
+			<label class="text-success"> NAME *</label>   
+<input type="text" class="form-control" placeholder="NAME" required="required" name="pname" value="" maxlength="100">
+		</div> <!-- form-group end.// -->
+		<div class="col form-group">
+			<label class="text-success">  FATHER'S / HUSBAND'S NAME *</label>
+<input type="text" class="form-control" placeholder="FATHER&#39;S / HUSBAND&#39;S NAME" value="" required="required" name="pfname" maxlength="100">
+		</div> <!-- form-group end.// -->
+	</div> <!-- form-row end.// -->
+
+<div class="form-row">
+	<div class="col form-group">
+			<label class="text-success">  DATE OF BIRTH </label>
+<input type="date" name="pdob" class="form-control" placeholder="DATE OF BIRTH" value="" maxlength="15">
+		</div>
+		<div class="col form-group">
+			<label class="text-success"> AGE ON CLOSING DATE </label>  <br> 
+ <input class="form-control" type="NUMBER" name="pageyy" value="" size="4" maxlength="2" placeholder="YY">
+</div>
+<div class="col form-group">
+	<label class="text-success"> YEARS &nbsp;&nbsp;&nbsp; MONTHS    </label>  <br>
+   <input type="NUMBER" class="form-control" name="pagemm" value="" size="4" maxlength="2" placeholder="MM">
+</div>
+<div class="col form-group">
+	<label class="text-success">  &amp;  DAYS </label>  <br>
+  <input type="NUMBER" class="form-control" name="pagedd" value="" size="4" maxlength="2" placeholder="DD"> 
+		</div> <!-- form-group end.// -->
+		 <!-- form-group end.// -->
+	</div> <!-- form-row end.// -->
+
+<div class="form-row">
+	<div class="col form-group">
+	<label class="text-success"> GENDER </label><br>
+			<label class="form-check form-check-inline">   
+<input class="form-check-input" type="radio" name="pgender" value="Male">
+		  <span class="text-info"> MALE </span>
+		</label>
+
+		<label class="form-check form-check-inline">
+		  <input class="form-check-input" type="radio" name="pgender" value="Female">
+		  <span class="text-info"> FEMALE </span>
+		</label>
+</div>
+<div class="col form-group">
+	<label class="text-success"> MARITAL STATUS </label>  <br>
+	<label class="form-check form-check-inline"> 
+<input class="form-check-input" type="radio" name="pmstatus" value="SINGLE">
+		  <span class="text-info"> SINGLE </span>
+		</label>
+		<label class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="pmstatus" value="MARRIED">
+		  <span class="text-info"> MARRIED </span>
+		</label>
+</div>
+	</div> <!-- form-group end.// -->
+
+	
+<div class="form-group">
+		<label class="text-success"> ADDRESS * </label>
+<input type="text" name="paddr" class="form-control" placeholder="ADDRESS" maxlength="200" required="required" value="">		 
+	</div> <!-- form-group end.// -->
+	
+<div class="form-row">
+		<div class="col form-group">
+			<label class="text-success"> CITY *</label>   
+<input type="text" class="form-control" placeholder="CITY" required="required" name="pcity" value="" maxlength="50">
+		</div> <!-- form-group end.// -->
+		<div class="col form-group">
+			<label class="text-success">  PROVINCE / STATE *</label>
+<input type="text" class="form-control" placeholder="PROVINCE / STATE" required="required" name="pstate" maxlength="50" value="">
+		</div> <!-- form-group end.// -->
+	</div> <!-- form-row end.// -->
+
+<div class="form-row">
+		<div class="col form-group">
+			<label class="text-success"> COUNTRY *</label>   
+<input type="text" class="form-control" placeholder="COUNTRY" required="required" name="pcountry" value="" maxlength="50">
+		</div> <!-- form-group end.// -->
+		<div class="col form-group">
+			<label class="text-success">  AREA CODE </label>
+<input type="text" class="form-control" placeholder="AREA CODE" required="required" name="pacode" maxlength="30" value="">
+		</div> <!-- form-group end.// -->
+	</div> <!-- form-row end.// -->
+
+<div class="form-row">
+		<div class="col form-group">
+			<label class="text-success"> PHONE </label>   
+<input type="text" class="form-control" placeholder="PHONE" name="ptel" value="" maxlength="50">
+		</div> <!-- form-group end.// -->
+		<div class="col form-group">
+			<label class="text-success">  MOBILE *</label>
+<input type="text" class="form-control" placeholder="MOBILE" required="required" name="pmobile" maxlength="30" value="">
+		</div> <!-- form-group end.// -->
+	</div> <!-- form-row end.// -->
+
+<div class="form-row">
+		<div class="col form-group">
+			<label class="text-success"> CLINIC </label>   
+<input type="text" class="form-control" placeholder="CLINIC" name="pclinic" value="" maxlength="50">
+		</div> <!-- form-group end.// -->
+		<div class="col form-group">
+			<label class="text-success">  EMAIL *</label>
+<input type="email" class="form-control" placeholder="EMAIL" required="required" name="pemail" maxlength="100" value="">
+		</div> <!-- form-group end.// -->
+	</div> <!-- form-row end.// -->
+
+<div class="form-group">
+		<label class="text-success"> PERMANENT ADDRESS </label>
+ 	<label class="badge badge-info"> (If different from above)   </label>
+<input type="text" name="ppaddr" class="form-control" placeholder="PERMANENT ADDRESS" maxlength="100" value="">		 
+	</div> <!-- form-group end.// -->
+	
+<div class="form-row">
+		<div class="col form-group">
+			<label class="text-success"> CITY *</label>   
+<input type="text" class="form-control" placeholder="CITY" name="ppcity" value="" maxlength="50">
+		</div> <!-- form-group end.// -->
+		<div class="col form-group">
+			<label class="text-success">  PROVINCE / STATE *</label>
+<input type="text" class="form-control" placeholder="PROVINCE / STATE" name="ppstate" maxlength="50" value="">
+		</div> <!-- form-group end.// -->
+	</div> <!-- form-row end.// -->
+
+<div class="form-row">
+		<div class="col form-group">
+			<label class="text-success"> COUNTRY *</label>   
+<input type="text" class="form-control" placeholder="COUNTRY" name="ppcountry" value="" maxlength="50">
+		</div> <!-- form-group end.// -->
+		<div class="col form-group">
+			<label class="text-success">  AREA CODE </label>
+<input type="text" class="form-control" placeholder="AREA CODE" name="ppacode" value="" maxlength="30">
+		</div> <!-- form-group end.// -->
+	</div> <!-- form-row end.// -->
+
+<div class="form-row"> <p>&nbsp; </p>   </div>
+
+<div class="form-row">
+		<div class="col form-group">
+			<label class="text-success"> DOMICILE *</label>   
+<input type="text" class="form-control" placeholder="DOMICILE" name="pdomicile" value="" maxlength="50" required="required">
+		</div> <!-- form-group end.// -->
+		<div class="col form-group">
+			<label class="text-success">  CNIC NUMBER * (13 Digit Without '-' or Spaces) </label>
+<input type="text" class="form-control" placeholder="CNIC NUMBER" required="required" name="pcnic" maxlength="13" value="">
+		</div> <!-- form-group end.// -->
+	</div> <!-- form-row end.// -->
+
+<div class="form-row">
+		
+		<div class="form-group col-md-6">
+		  <label class="text-success"> DEGREE ACCREDITATION COUNCIL </label>
+		  <select id="inputState" name="dac" class="form-control">
+		    <option> Choose...</option>
+ <option value="PBC">1. Pakistan Bar Council (PBC)</option>
+ <option value="PCATP">2. Pakistan Council for Architects and Town Planners (PCATP)</option>
+ <option value="PEC">3. Pakistan Engineering Council (PEC)</option>
+ <option value="PMDC">4. Pakistan Medical &amp; Dental Council (PMDC)</option>
+ <option value="PNC">5. Pakistan Nursing Council (PNC)</option>
+<option value="PCP">6. Pakistan Pharmacy Council (PCP)</option>
+<option value="PVMC">7. Pakistan Veterinary Medical Council (PVMC)</option>
+<option value="NCH">8. National Council for Homoeopathy (NCH)</option>
+<option value="NCT">9. National Council for Tibb (NCT)</option>
+		  </select>
+		</div> <!-- form-group end.// -->
+
+<div class="form-group col-md-6">
+		 <label class="text-success"> DEGREE ACCREDITATION COUNCIL NUMBER </label>
+		 <input type="text" class="form-control" placeholder="DEGREE ACCREDITATION COUNCIL NUMBER" name="ppmdcno" value="" maxlength="50">
+		</div> <!-- form-group end.// -->
+	</div> <!-- form-row.// -->
+</div> <!-- form-group end.// -->
+	</div>
+
+<div class="form-row"> <p>&nbsp; </p>   </div>
+<div class="form-group">
+ <button type="submit" name="cont1" class="btn btn-primary btn-block"> SUBMIT &amp; CONTINUE  </button>
+    </div> <!-- form-group// -->
+
+<div class="form-row"> <p>&nbsp; </p>   </div>
+
+
+<div class="card text-white border-success">
+  <div class="card-header bg-success "> 
+   <h4 class="card-title"> 2. CURRENT APPOINTMENT </h4>     
+  </div>
+<div class="card-body">  
+<div class="form-group">		 
+<textarea name="pcurapp" class="form-control" placeholder="CURRENT APPOINTMENT" cols="84" rows="3">		 </textarea>
+	</div> <!-- form-group end.// -->
+	</div>
+</div>
+ 
+<div class="form-row"> <p>&nbsp; </p>   </div>
+
+
+<div class="card text-white border-success">
+  <div class="card-header bg-success "> 
+   <h4 class="card-title"> 3. ACADEMIC PROFILE  </h4>
+    (Most Recent First) (Use Tab to Move to Next Row)   
+  </div>
+<div class="card-body">      
+
+ <div id="TextBoxesGroup">
+	    <div id="TextBoxDiv1"> 
+
+
+<div class="form-row">
+	<label class="text-success">  1 </label>
+		<div class="col form-group">
+			<label class="text-success"> DEGREE/DIPLOMA/CERTIFICTE </label>   
+<input type="text" class="form-control" placeholder="DEGREE/DIPLOMA/CERTIFICTE" name="pdegree[]" value="" maxlength="150" required="required">
+		</div> <!-- form-group end.// -->
+		<div class="col form-group">
+			<label class="text-success">  YEAR </label>
+<input type="text" class="form-control" placeholder="YEAR" name="pyear[]" maxlength="10" required="required">
+		</div> <!-- form-group end.// -->
+<div class="col form-group">
+			<label class="text-success">  INSTITUTION  </label>
+<input type="text" class="form-control" placeholder="INSTITUTION" name="pinst[]" maxlength="150" required="required">
+		</div>
+</div>  </div>
+</div>
+
+<div class="form-row">
+	<div class="col form-group">
+ 	<input type="button" class="btn btn-info btn-block" value="ADD MORE ACADEMIC PROFILE" id="addButton">
+</div>
+<div class="col form-group">
+<input type="button" value="REMOVE ACADEMIC PROFILE" class="btn btn-danger btn-block" id="removeButton">
+</div>
+ </div>
+</div>
+</div>
+
+<div class="form-row"> <p>&nbsp; </p>   </div>
+
+
+
+<div class="card text-white border-success">
+  <div class="card-header bg-success "> 
+   <h4 class="card-title"> 4. ACADEMIC HONOURS AND AWARDS   </h4>
+     (Use Tab to Move to Next Row)   
+  </div>
+<div class="card-body"> 
+
+
+
+<div class="form-row">
+		<div class="col form-group">
+<div id="TextBoxesGroupahn"> 
+	<div id="TextBoxDiv1ahn">
+			  <label class="text-success"> 1 </label>   			
+<input type="text" name="ahonour[]" class="form-control" placeholder="ACADEMIC HONOURS AND AWARDS" maxlength="100">
+		</div>
+</div>
+</div>
+</div>
+
+<div class="form-row">
+ 	<div class="col form-group">
+   <input type="button" class="btn btn-info btn-block" value="ADD MORE ACADEMIC HONOURS AND AWARDS" id="addButtonahn">
+                   </div>
+                   <div class="col form-group">
+<input type="button" class="btn btn-danger btn-block" value="REMOVE ACADEMIC HONOURS AND AWARDS" id="removeButtonahn">      
+ </div>
+</div>
+</div>
+</div>
+
+<div class="form-row"> <p>&nbsp; </p>   </div>
+<div class="form-group">
+        <button type="submit" name="cont2" class="btn btn-primary btn-block"> SUBMIT &amp; CONTINUE  </button>
+    </div> <!-- form-group// -->
+
+<div class="form-row"> <p>&nbsp; </p>   </div>
+ 
+
+
+<div class="card text-white border-success">
+  <div class="card-header bg-success "> 
+   <h4 class="card-title"> 5. EXPERIENCE  </h4>
+    (Most Recent First)  (Use Tab to Move to Next Row)    
+  </div>
+<div class="card-body"> 
+
+
+
+
+<label class="text-success"> 1 </label>
+<div id="TextBoxesGroupExp">
+	<div id="TextBoxDiv1Exp">
+<div class="form-row">
+		<div class="col form-group">
+			<label class="text-success"> POST </label>   
+<input type="text" class="form-control" placeholder="POST" name="post[]" value="" maxlength="150" required="required">		</div> <!-- form-group end.// -->
+
+<div class="col form-group">
+			<label class="text-success">  INSTITUTION  </label>
+<input type="text" class="form-control" placeholder="INSTITUTION" name="einst[]" maxlength="150" required="required">		</div>
+
+		<div class="col form-group">
+			<label class="text-success">  FROM </label>
+<input type="text" class="form-control" placeholder="FROM" name="from[]" maxlength="10" required="required">
+		</div> <!-- form-group end.// -->
+<div class="col form-group">
+			<label class="text-success">  TO </label>
+<input type="text" class="form-control" placeholder="TO" name="to[]" maxlength="10" required="required">
+		</div> <!-- form-group end.// -->
+</div>
+</div> <!-- form-group end.// -->
+</div>
+<div class="form-row">
+<div class="col form-group">    
+   <input type="button" class="btn btn-info btn-block" value="ADD MORE EXPERIENCE" id="addButtonExp">
+                   </div>
+                   <div class="col form-group">     
+<input type="button" class="btn btn-danger btn-block" value="REMOVE EXPERIENCE" id="removeButtonExp">
+ </div> 	 
+ </div>
+</div> 	 
+ </div>
+
+<div class="form-row"> <p>&nbsp; </p>   </div>
+
+
+<div class="card text-white border-success">
+  <div class="card-header bg-success "> 
+   <h4 class="card-title"> 6. RESEARCH PAPERS,DISSERTATIONS AND PUBLICATIONS  </h4>
+    (Mention all papers you wish to be given credit of. No credit will be given to papers not listed in this application form)  
+  </div>
+<div class="card-body"> 
+
+
+
+ <div id="TextBoxesGroupRes">
+	<div id="TextBoxDiv1Res">
+
+		<label class="text-success">  1  </label>
+ <div class="form-row">
+		<div class="col form-group">
+			<label class="text-success"> TITLE OF PAPER </label>   
+<input type="text" class="form-control" placeholder="TITLE OF PAPER" name="research[]" value="" maxlength="150">		</div> <!-- form-group end.// -->
+
+<div class="col form-group">
+			<label class="text-success">  JOURNAL'S NAME  </label>
+<input type="text" class="form-control" placeholder="JOURNAL NAME" name="jname[]" maxlength="150">		</div>
+<div class="col form-group">
+			<label class="text-success">  YEAR  </label>
+<input type="text" class="form-control" placeholder="YEAR" name="ryear[]" maxlength="15">		</div>
+		<div class="col form-group">
+			<label class="text-success">  NAME AS AUTHOR  </label>
+<input type="text" class="form-control" placeholder="NAME AS AUTHOR IN PAPER" name="rname[]" maxlength="10">
+		</div> <!-- form-group end.// -->
+ 
+</div>
+</div>
+</div>
+
+<div class="form-row">
+<div class="col form-group">   
+<input type="button" class="btn btn-info btn-block" value="ADD MORE RESEARCH PAPERS" id="addButtonRes">               </div>
+                   <div class="col form-group">   
+ <input type="button" class="btn btn-danger btn-block" value="REMOVE RESEARCH PAPERS" id="removeButtonRes">   
+  </div> 	 
+ </div>
+</div> 	 
+ </div>
+
+ 
+<div class="form-row"> <p>&nbsp; </p>   </div>
+ 
+
+<div class="card text-white border-success">
+  <div class="card-header bg-success "> 
+   <h4 class="card-title"> 7. WORKSHOPS  &amp; TRAINING COURSES  </h4>    
+  </div>
+<div class="card-body"> 
+ 
+
+
+ <div id="TextBoxesGroupwkt">
+	<div id="TextBoxDiv1wkt">
+		<label class="text-success"> 1 </label>
+<div class="form-row">
+		<div class="col form-group">
+			<label class="text-success"> WORKSHOP NAME </label>   
+<input type="text" class="form-control" placeholder="WORKSHOP NAME" name="wname[]" value="" maxlength="150">
+		</div> <!-- form-group end.// -->
+		<div class="col form-group">
+			<label class="text-success"> VENUE </label>
+<input type="text" class="form-control" placeholder="VENUE" name="wvenue[]" maxlength="50">
+		</div> <!-- form-group end.// -->
+<div class="col form-group">
+			<label class="text-success"> YEAR  </label>
+<input type="text" class="form-control" placeholder="YEAR" name="wyear[]" maxlength="15">
+		</div>
+</div>
+</div>
+</div>
+
+
+<div class="form-row">
+	<div class="col form-group">    
+<input type="button" class="btn btn-info btn-block" value="ADD MORE WORKSHOPS" id="addButtonwkt">
+          </div>
+                   <div class="col form-group">   
+ <input type="button" class="btn btn-danger btn-block" value="REMOVE WORKSHOPS" id="removeButtonwkt">      
+  </div> 	  	 
+ </div>
+</div> 	  	 
+ </div>
+<div class="form-row"> <p>&nbsp; </p>   </div>
+
+<div class="card text-white border-success">
+  <div class="card-header bg-success "> 
+   <h4 class="card-title"> 8. ANY OTHER  </h4>    
+  </div>
+<div class="card-body"> 
+ 
+<div class="form-group">		 
+<textarea name="panyother" class="form-control" placeholder="ANY OTHER" cols="84" rows="3">		 </textarea>
+	</div> <!-- form-group end.// -->
+</div>
+	</div>
+
+<div class="form-row"> <p>&nbsp; </p>   </div>
+
+<div class="card text-white border-success">
+  <div class="card-header bg-success "> 
+   <h4 class="card-title"> 9. RESEARCH AND ACADEMIC INTERESTS  </h4>    
+  </div>
+<div class="card-body"> 
+ 
+<div class="form-group">		 
+<textarea name="presearch" class="form-control" placeholder="RESEARCH AND ACADEMIC INTERESTS" cols="84" rows="3">		 </textarea>
+	</div> <!-- form-group end.// -->
+</div>
+</div>
+
+<div class="form-row"> <p>&nbsp; </p>   </div>
+
+<div class="card text-white border-success">
+  <div class="card-header bg-success "> 
+   <h4 class="card-title"> 10. REFERENCES  </h4>    
+   (Must Include the Most Recent Superior)
+  </div>
+<div class="card-body"> 
+ 
+<div class="form-group">		 
+
+<div class="form-row">
+		<div class="col form-group">
+			<label class="text-success"> 1. NAME </label>   
+<input type="text" class="form-control" placeholder="NAME" name="prname1" value="" maxlength="150">
+		</div> <!-- form-group end.// -->
+		<div class="col form-group">
+			<label class="text-success"> DESIGNATION </label>
+<input type="text" class="form-control" placeholder="DESIGNATION" name="prdesig1" maxlength="150" value="">
+		</div> <!-- form-group end.// -->
+<div class="col form-group">
+			<label class="text-success"> MOBILE / PHONE  </label>
+<input type="text" class="form-control" placeholder="MOBILE / PHONE" name="prtel1" maxlength="50" value="">
+		</div>
+</div>
+
+<div class="form-row">
+		<div class="col form-group">
+			<label class="text-success"> ADDRESS </label>   
+<input type="text" class="form-control" placeholder="ADDRESS" name="praddr1" value="" maxlength="150">
+		</div> <!-- form-group end.// -->
+		 
+<div class="col form-group">
+			<label class="text-success"> EMAIL  </label>
+<input type="text" class="form-control" placeholder="EMAIL" value="" name="premail1" maxlength="100">
+		</div>
+</div>
+	</div> <!-- form-group end.// -->
+
+
+<div class="form-row"> <p>&nbsp; </p>   </div>
+<div class="form-group">		 
+
+<div class="form-row">
+		<div class="col form-group">
+			<label class="text-success"> 2. NAME </label>   
+<input type="text" class="form-control" placeholder="NAME" name="prname2" value="" maxlength="150">
+		</div> <!-- form-group end.// -->
+		<div class="col form-group">
+			<label class="text-success"> DESIGNATION </label>
+<input type="text" class="form-control" placeholder="DESIGNATION" name="prdesig2" maxlength="150" value="">
+		</div> <!-- form-group end.// -->
+<div class="col form-group">
+			<label class="text-success"> MOBILE / PHONE  </label>
+<input type="text" class="form-control" placeholder="MOBILE / PHONE" name="prtel2" maxlength="50" value="">
+		</div>
+</div>
+
+<div class="form-row">
+		<div class="col form-group">
+			<label class="text-success"> ADDRESS </label>   
+<input type="text" class="form-control" placeholder="ADDRESS" name="praddr2" value="" maxlength="150">
+		</div> <!-- form-group end.// -->
+		 
+<div class="col form-group">
+			<label class="text-success"> EMAIL  </label>
+<input type="text" class="form-control" placeholder="EMAIL" name="premail2" maxlength="100" value="">
+		</div>
+</div>
+</div>
+</div>
+
+	</div> <!-- form-group end.// -->
+
+
+		 <!--
+</div>
+
+	</div> <!-- form-row end.// -->
+
+	 
+<div class="form-row"> <p>&nbsp; </p>   </div>
+
+
+<div class="form-row">
+ <p><span class="badge badge-danger"> Note: All the original documents, including publications , to be brought at the time of interview. </span></p>
+ <small class="text-muted">   By clicking the 'Submit' button, You confirm that You have filled the Online Job Application Form Carefully &amp; the Information provided by You on the above form is True, Complete and Accurate. </small>
+ </div>
+	
+	 <div class="form-row"> <p>&nbsp; </p>   </div>
+	 
+    <div class="form-group">
+  <button type="submit" name="finalsubmit" value="SUBMIT AND PROCEED TO NEXT STEP" class="btn btn-primary btn-block"> FINAL SUBMIT AND PROCEED TO UPLOAD PICTURE STEP</button>
+    </div> <!-- form-group// -->      
+     
+    <div class="form-row"> <p>&nbsp; </p>   </div>
+                                          
+</form>
+</article> <!-- card-body end .// -->
+ 
+</div> <!-- card.// -->
+</div> <!-- col.//-->
+
+</div> <!-- row.//-->
+
+
+</div> 
+<!--container end.//-->
+ </body></html>

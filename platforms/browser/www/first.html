@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Booking and Traveling	</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/cd2bbc6907.js" crossorigin="anonymous"></script>
+</head>
+		
+<body>
+
+	<div class="container mt-3" align="center" > <img class="img-fluid" src="Images/logo.jpg" width="20%" height="20%" > <h2> Booking & Traveling</h2> <nav class="navbar bg-warning navbar-light navbar-expand-sm ">
+		
+			<button  class="navbar-toggler bg-primary float-right" data-toggle="collapse" data-target="#myNav">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse " id="myNav" >
+				<ul class="navbar-nav">
+					<li><a class="nav-link text-light " href="#">Home</a></li>
+					<li><a class="nav-link text-light " href="hotels.html" target="blank">Hotels </a></li>
+					<li><a class="nav-link text-light " href="parks.html" target="blank">Parks</a></li>
+					<li><a class="nav-link text-light " href="museums.html" target="blank">Museums</a></li>
+					<li><a class="nav-link text-light "  href="flights.html" target="blank">flights</a></li>
+				</ul>
+			</div></nav>
+	<div class="fluid-container bg-info mt-5 pt-3">
+	<h2 class="text-center mt-3"> <i class="fa fa-check" aria-hidden="true" style="color:green;"></i> Thankyou For your Purchase</h2>
+	<h5 class='text-center text-light'> Dear Customer, confirmation email will be sent to you shortly!</h5>
+	<p class='text-center text-light '> Email successfully sent to your email address. </p>
+	<div class="fluid-container bg-info mb-5 pb-5" align="center"><button class="btn btn-md bg-success text-light" align="center" onclick="back();">Go Back</button></div>
+</div>
+
+<script type="text/javascript">
+	function back(){
+			window.location.href = "./home.html";
+	}
+</script>
+<script type="text/javascript">
+		function park(){
+			window.open("parks.html");
+		}
+		function flight(){
+			window.open("flights.html");
+		}
+		function hotel(){
+			window.open("hotels.html");
+		}
+		function cinema(){
+			window.open("museums.html");
+		}
+	</script>
+
+</body>
+</html>		

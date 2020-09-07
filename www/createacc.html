@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Booking & Traveling</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initialscale=1.0">
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<script src="https://kit.fontawesome.com/cd2bbc6907.js" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		function created(){
+			alert("Your Account Created Successfully!");
+			window.open("index.html");
+		}
+	</script>
+</head>
+<body>
+		
+		<form class="container mt-5">
+
+			<h1 class="text-center">Create an account</h1>
+			<div class="form-group">
+				<label class="text-left">First Name</label>
+				<input type="text" class="form-control" required="">
+				<label class="text-left">Last Name</label>
+				<input type="text" class="form-control" required="">
+			</div>
+			<div class="form-group">
+				<label>Email</label>
+				<input type="email" name="" class="form-control" required="">
+
+			</div>
+			<div class="form-group">
+				<label>Password</label>
+				<input type="password" name="" class="form-control" required="">
+			</div>
+			<div class="form-group">
+				<label>Mobile Number</label>
+				<input type="number" name="" class="form-control" required=""> 
+
+			</div>
+			<button class="btn btn-md btn-warning text-light" type="submit "  onclick="created()">Create an account</button><br><Br>
+			<span>Go back to Home page <a href="index.html" class="text-warning">Booking and Travelling</a></span>
+		</form>	
+
+
+
+
+
+
+<script src="jquery-3.5.1.min.js"></script>
+<script src="bootstrap.min.js"></script>
+</body>
+</html>
